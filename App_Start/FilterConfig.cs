@@ -11,6 +11,7 @@ namespace MovieWebApp
 
             filters.Add(new AuthorizeAttribute()); // Enable Auth restriction
 
+            filters.Add(new RequireHttpsAttribute()); // Set https only 
         }
     }
 }

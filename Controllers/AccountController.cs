@@ -78,10 +78,29 @@ namespace MovieWebApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser() { UserName = model.UserName };
+                var user = new ApplicationUser()
+                {
+                    UserName = model.UserName,
+                    DrivingLicense = model.DrivingLicense // Adding a new field in the Register form
+                };
+
                 var result = await UserManager.CreateAsync(user, model.Password);
+
                 if (result.Succeeded)
                 {
+
+                    // Temp code here 
+
+                    //var roleStore = new RoleStore<IdentityRole>(new ApplicationDbContext());
+
+                    //var roleManager = new RoleManager<IdentityRole>(roleStore);
+
+                    //await roleManager.CreateAsync(new IdentityRole("CanManageMovies"));
+
+                    //await UserManager.AddToRoleAsync(user.Id, "CanManageMovies");
+
+                    //****************************************************
+
                     await SignInAsync(user, isPersistent: false);
                     return RedirectToAction("Index", "Home");
                 }

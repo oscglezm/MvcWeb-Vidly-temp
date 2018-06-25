@@ -9,6 +9,8 @@ using System.Data.Entity; // Eager Loading
 
 namespace MovieWebApp.Controllers
 {
+    using System.Diagnostics.CodeAnalysis;
+
     [AllowAnonymous] //allow anonymous access
     public class CustomersController : Controller
     {
@@ -22,6 +24,7 @@ namespace MovieWebApp.Controllers
         }
 
 
+       
         protected override void Dispose(bool disposing)
         {
             _context.Dispose();

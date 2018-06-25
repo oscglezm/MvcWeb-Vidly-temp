@@ -32,14 +32,24 @@ namespace MovieWebApp.Controllers
  
         public ViewResult Index()
         {
-            List<Movie> movies = _context.Movies.Include(x => x.Genre).ToList(); // Eager Loading (Include..)
+            
+           // List<Movie> movies = _context.Movies.Include(x => x.Genre).ToList(); // Eager Loading (Include..)
 
+            /*
             var viewModel = new RandomMovieModel
             {
                 Movies = movies
             };
 
             return View(viewModel);
+             */
+
+            if (User.IsInRole(RoleName.CanManageMovies))
+            {
+                return View("List");
+            }
+
+            return View("ReadOnlyList");
         }
 
 
@@ -55,6 +65,7 @@ namespace MovieWebApp.Controllers
 
 
 
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public ActionResult New()
         {
             var genres = _context.Genres.ToList();

@@ -46,6 +46,10 @@ namespace MovieWebApp.Models
     public class RegisterViewModel
     {
         [Required]
+        [Display(Name = "Driving License")]
+        public string DrivingLicense { get; set; }
+
+        [Required]
         [Display(Name = "User name")]
         public string UserName { get; set; }
 

@@ -6,6 +6,7 @@ using System.Web.Http;
 using AutoMapper;
 using MovieWebApp.Dtos;
 using MovieWebApp.Models;
+using System.Data.Entity; // Eager Loading
 
 namespace MovieWebApp.Controllers.Api
 {
@@ -20,9 +21,14 @@ namespace MovieWebApp.Controllers.Api
 
 
         // GET /api/movies
-        public IEnumerable<MovieDto> GetMovies()
+        public IHttpActionResult GetMovies()
         {
-            return _context.Movies.ToList().Select(Mapper.Map<Movie,MovieDto>);
+            
+            var moviesDto = _context.Movies.Include(m => m.Genre)
+                .ToList()
+                .Select(Mapper.Map<Movie, MovieDto>);
+
+            return Ok(moviesDto);
         }
 
         

@@ -28,9 +28,9 @@ namespace MovieWebApp
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "852496194950291",
+               appSecret: "a0b2c33dde10037d7d9a401449bf97df");
 
             //app.UseGoogleAuthentication();
         }

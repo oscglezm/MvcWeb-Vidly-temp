@@ -22,7 +22,10 @@ namespace MovieWebApp.Dtos
         [Range(1, 20, ErrorMessage = "The field Number in Stock must be between 1 and 20.")]
         public int NumberInStock { get; set; }
         
+        [Required]
         public byte GenreId { get; set; }
+
+        public GenreDto Genre { get; set; }
 
     }
 }

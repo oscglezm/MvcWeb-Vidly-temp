@@ -27,6 +27,7 @@
         <thead>
         <tr>
             <th> Movie</th>
+            <th> Genre</th>
             <th> Delete</th>
         </tr>
 
@@ -63,6 +64,9 @@
                         render: function (data, type, movie) {
                             return "<a href='/movies/edit/" + movie.ID + "'>" + movie.name + "</a>";
                         }
+                    },
+                    {
+                        data: "genre.name"
                     },
                    {
                         data: "id",
