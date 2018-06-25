@@ -259,3 +259,6 @@ C:\Users\OscarGM\documents\visual studio 2013\Projects\MovieWebApp\MovieWebApp\o
 C:\Users\OscarGM\documents\visual studio 2013\Projects\MovieWebApp\MovieWebApp\obj\Debug\MovieWebApp.Migrations.SeedUsers.resources
 C:\Users\OscarGM\documents\visual studio 2013\Projects\MovieWebApp\MovieWebApp\obj\Debug\MovieWebApp.Migrations.AddDrivingLicenseToApplicationUser.resources
 C:\Users\OscarGM\documents\visual studio 2013\Projects\MovieWebApp\MovieWebApp\obj\Debug\MovieWebApp.Migrations.AddDrivingLicense.resources
+C:\Users\oscglezm\documents\visual studio 2013\Projects\MovieWebApp\MovieWebApp\obj\Debug\MovieWebApp.Migrations.SeedUsers.resources
+C:\Users\oscglezm\documents\visual studio 2013\Projects\MovieWebApp\MovieWebApp\obj\Debug\MovieWebApp.Migrations.AddDrivingLicenseToApplicationUser.resources
+C:\Users\oscglezm\documents\visual studio 2013\Projects\MovieWebApp\MovieWebApp\obj\Debug\MovieWebApp.Migrations.AddDrivingLicense.resources

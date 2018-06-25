@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
 using MovieWebApp.Models;
+using MovieWebApp.ViewModels;
 
 namespace MovieWebApp.Controllers
 {
