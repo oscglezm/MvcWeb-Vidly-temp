@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace MovieWebApp.Controllers
 {
+    [AllowAnonymous] //allow anonymous access
     public class HomeController : Controller
     {
         public ActionResult Index()

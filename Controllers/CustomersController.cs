@@ -5,13 +5,16 @@ using System.Web;
 using System.Web.Mvc;
 using MovieWebApp.Models;
 using MovieWebApp.ViewModels;
-using System.Data.Entity; // Eager Loading
+using System.Data.Entity;
+using System.Runtime.Caching;
+
+// Eager Loading
 
 namespace MovieWebApp.Controllers
 {
     using System.Diagnostics.CodeAnalysis;
 
-    [AllowAnonymous] //allow anonymous access
+   
     public class CustomersController : Controller
     {
         //
@@ -32,7 +35,15 @@ namespace MovieWebApp.Controllers
 
         public ViewResult Index()
         {
-            List<Customer> customers = _context.Customers.Include(c => c.MemberShipType).ToList(); // Eager Loading
+            //Data caching
+            if (MemoryCache.Default["Genres"] == null)
+            {
+                MemoryCache.Default["Genres"] = _context.Genres.ToList();
+            }
+
+            var genres = MemoryCache.Default["Genres"] as IEnumerable<Genre>;
+
+           //  List<Customer> customers = _context.Customers.Include(c => c.MemberShipType).ToList(); // Eager Loading
 
             //RandomMovieModel viewModels = new RandomMovieModel
             //{

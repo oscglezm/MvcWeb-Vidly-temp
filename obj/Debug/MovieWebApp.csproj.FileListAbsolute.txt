@@ -262,3 +262,8 @@ C:\Users\OscarGM\documents\visual studio 2013\Projects\MovieWebApp\MovieWebApp\o
 C:\Users\oscglezm\documents\visual studio 2013\Projects\MovieWebApp\MovieWebApp\obj\Debug\MovieWebApp.Migrations.SeedUsers.resources
 C:\Users\oscglezm\documents\visual studio 2013\Projects\MovieWebApp\MovieWebApp\obj\Debug\MovieWebApp.Migrations.AddDrivingLicenseToApplicationUser.resources
 C:\Users\oscglezm\documents\visual studio 2013\Projects\MovieWebApp\MovieWebApp\obj\Debug\MovieWebApp.Migrations.AddDrivingLicense.resources
+C:\Users\OscarGM\documents\visual studio 2013\Projects\MovieWebApp\MovieWebApp\bin\Glimpse.Ado.dll
+C:\Users\OscarGM\documents\visual studio 2013\Projects\MovieWebApp\MovieWebApp\bin\Glimpse.AspNet.dll
+C:\Users\OscarGM\documents\visual studio 2013\Projects\MovieWebApp\MovieWebApp\bin\Glimpse.Core.dll
+C:\Users\OscarGM\documents\visual studio 2013\Projects\MovieWebApp\MovieWebApp\bin\Glimpse.EF6.dll
+C:\Users\OscarGM\documents\visual studio 2013\Projects\MovieWebApp\MovieWebApp\bin\Glimpse.Mvc5.dll

@@ -10,6 +10,7 @@
 
             @*this is the menu of the web app.*@
             @Html.ActionLink("Home", "Index", "Home", null, new { @class = "navbar-brand" })
+            @Html.ActionLink("New Rental", "New", "Rentals",null, new { @class = "navbar-brand" })
             @Html.ActionLink("Customers", "Index", "Customers", new { id = 1 }, new { @class = "navbar-brand" })
             @Html.ActionLink("Movies", "Index", "Movies", new { id = 1 }, new { @class = "navbar-brand" })
 
