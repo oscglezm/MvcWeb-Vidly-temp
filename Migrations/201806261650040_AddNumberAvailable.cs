@@ -7,9 +7,9 @@ namespace MovieWebApp.Migrations
     {
         public override void Up()
         {
-            AddColumn("dbo.Movies", "NumberAvailable", c => c.Byte(nullable: false));
+            AddColumn("dbo.Movies", "NumberAvailable", c => c.Int(nullable: false));
 
-            Sql("update Movies set NumberAvailable = NumberInStock");
+            Sql("update dbo.Movies set NumberAvailable = NumberInStock");
         }
         
         public override void Down()

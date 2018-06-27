@@ -94,3 +94,4 @@ C:\Users\OscarGM\documents\visual studio 2013\Projects\MovieWebApp\MovieWebApp\b
 C:\Users\OscarGM\documents\visual studio 2013\Projects\MovieWebApp\MovieWebApp\obj\Release\MovieWebApp.dll
 C:\Users\OscarGM\documents\visual studio 2013\Projects\MovieWebApp\MovieWebApp\obj\Release\MovieWebApp.pdb
 C:\Users\OscarGM\documents\visual studio 2013\Projects\MovieWebApp\MovieWebApp\obj\Release\MovieWebApp.Migrations.AddNumberAvailable.resources
+C:\Users\OscarGM\documents\visual studio 2013\Projects\MovieWebApp\MovieWebApp\obj\Release\MovieWebApp.Migrations.updateDbContext.resources

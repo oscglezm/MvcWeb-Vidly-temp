@@ -32,11 +32,19 @@ namespace MovieWebApp.Controllers.Api
         }
 
         // GET /api/customers
-        public IHttpActionResult GetCustomers()
+        public IHttpActionResult GetCustomers(string query = null) //Filtering records
         {
             // _context.Customers.Include(c => c.MemberShipType).ToList(); // Eager Loading
 
-            var customerDtos = _context.Customers.Include(c => c.MemberShipType)
+            var customersQuery = _context.Customers.Include(c => c.MemberShipType);
+
+            //if there is a customer name filtered then retrieve that customer from the db.
+            if (!String.IsNullOrWhiteSpace(query))
+            {
+                customersQuery = customersQuery.Where(c => c.Name.Contains(query));
+            }
+
+            var customerDtos = customersQuery
                 .ToList()
                 .Select(Mapper.Map<Customer, CustomerDto>);
 

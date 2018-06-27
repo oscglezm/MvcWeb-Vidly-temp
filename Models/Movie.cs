@@ -30,7 +30,7 @@ namespace MovieWebApp.Models
 
         public byte GenreId { get; set; }
 
-        public byte NumberAvailable { get; set; }
+        public int NumberAvailable { get; set; }
 
        
     }

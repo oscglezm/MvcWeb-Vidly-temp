@@ -15,6 +15,7 @@ namespace MovieWebApp
                       "~/Scripts/bootbox.js",
                       "~/Scripts/respond.js",
                       "~/Scripts/Datatables/jquery.datatables.js",
+                      "~/Scripts/typeahead.bundle.js",
                       "~/Scripts/Datatables/datatables.bootstrap.js"
                ));
  
@@ -35,6 +36,7 @@ namespace MovieWebApp
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css",
+                      "~/Content/typeahead.css",
                       "~/Content/Datatables/css/datatables.bootstrap.cs"
                       ));
   

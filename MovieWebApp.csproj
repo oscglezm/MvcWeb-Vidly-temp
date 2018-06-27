@@ -322,6 +322,10 @@
     <Compile Include="Migrations\201806261650040_AddNumberAvailable.Designer.cs">
       <DependentUpon>201806261650040_AddNumberAvailable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806271515011_updateDbContext.cs" />
+    <Compile Include="Migrations\201806271515011_updateDbContext.Designer.cs">
+      <DependentUpon>201806271515011_updateDbContext.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -458,10 +462,13 @@
     <Content Include="Content\DataTables\images\sort_desc.png" />
     <Content Include="Content\DataTables\images\sort_desc_disabled.png" />
     <Content Include="Content\DataTables\swf\flashExport.swf" />
+    <Content Include="Content\typeahead.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bloodhound.js" />
+    <Content Include="Scripts\bloodhound.min.js" />
     <Content Include="Scripts\bootbox.js" />
     <Content Include="Scripts\bootbox.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -551,6 +558,10 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\typeahead.bundle.js" />
+    <Content Include="Scripts\typeahead.bundle.min.js" />
+    <Content Include="Scripts\typeahead.jquery.js" />
+    <Content Include="Scripts\typeahead.jquery.min.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -684,6 +695,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806261650040_AddNumberAvailable.resx">
       <DependentUpon>201806261650040_AddNumberAvailable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806271515011_updateDbContext.resx">
+      <DependentUpon>201806271515011_updateDbContext.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

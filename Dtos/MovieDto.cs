@@ -8,8 +8,6 @@ namespace MovieWebApp.Dtos
 {
     public class MovieDto
     {
-
-     
         public int ID { get; set; }
 
         [Required(ErrorMessage = "Please enter the Title of the Movie")]
