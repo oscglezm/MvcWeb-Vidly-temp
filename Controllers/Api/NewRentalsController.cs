@@ -21,44 +21,53 @@ namespace MovieWebApp.Controllers.Api
         [HttpPost]
         public IHttpActionResult CreateNewRentals(NewRentalDto newRental)
         {
-            if (newRental.MoviesIds.Count == 0)
-                return BadRequest("No movies Ids have been given");
-
-            //if (!ModelState.IsValid)
-            //    return BadRequest();
-
-            var customer = _context.Customers.SingleOrDefault(c => c.Id == newRental.CustomerId);
-
-            if (customer == null)
-                return BadRequest("Customer id is not valid");
-
-
-            var movies = _context.Movies.Where(m => newRental.MoviesIds.Contains(m.ID)).ToList();
-
-            if (movies.Count != newRental.MoviesIds.Count)
-                return BadRequest("One or more movies ids are invalid");
-            
-            foreach (Movie current in movies )
+            try
             {
-                if (current.NumberAvailable == 0)
-                    return BadRequest("Movie is not available");
+                if (newRental.MoviesIds.Count == 0)
+                    return BadRequest("No movies Ids have been given");
 
-                current.NumberAvailable--;
+                //if (!ModelState.IsValid)
+                //    return BadRequest();
 
-                var rental = new Rental()
+                var customer = _context.Customers.SingleOrDefault(c => c.Id == newRental.CustomerId);
+
+                if (customer == null)
+                    return BadRequest("Customer id is not valid");
+
+
+                var movies = _context.Movies.Where(m => newRental.MoviesIds.Contains(m.ID)).ToList();
+
+                if (movies.Count != newRental.MoviesIds.Count)
+                    return BadRequest("One or more movies ids are invalid");
+
+                foreach (Movie current in movies)
                 {
-                    Customer = customer,
-                    DateRented = DateTime.Now,
-                    Movie = current
-                };
+                    if (current.NumberAvailable == 0)
+                        return BadRequest("Movie is not available");
 
-                _context.Rentals.Add(rental);
-             
+                    current.NumberAvailable--;
+
+                    var rental = new Rental()
+                    {
+                        Customer = customer,
+                        DateRented = DateTime.Now,
+                        Movie = current
+                    };
+
+                    _context.Rentals.Add(rental);
+
+                }
+
+                _context.SaveChanges();
+
+                return Ok();
             }
-
-            _context.SaveChanges();
-
-            return Ok();
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+           
         }
     }
 }
