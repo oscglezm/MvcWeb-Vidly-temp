@@ -16,6 +16,7 @@ namespace MovieWebApp
                       "~/Scripts/respond.js",
                       "~/Scripts/Datatables/jquery.datatables.js",
                       "~/Scripts/typeahead.bundle.js",
+                      "~/Scripts/toastr.js",
                       "~/Scripts/Datatables/datatables.bootstrap.js"
                ));
  
@@ -37,6 +38,7 @@ namespace MovieWebApp
                       "~/Content/bootstrap.css",
                       "~/Content/site.css",
                       "~/Content/typeahead.css",
+                      "~/Content/toastr.css",
                       "~/Content/Datatables/css/datatables.bootstrap.cs"
                       ));
   

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNet.Identity;
+﻿using System.Configuration;
+using Microsoft.AspNet.Identity;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Owin;
@@ -29,8 +30,9 @@ namespace MovieWebApp
             //   consumerSecret: "");
 
             app.UseFacebookAuthentication(
-               appId: "852496194950291",
-               appSecret: "a0b2c33dde10037d7d9a401449bf97df");
+                appId: ConfigurationManager.AppSettings["facebookAppId"],  //"852496194950291",
+               appSecret: ConfigurationManager.AppSettings["facebookSecretId"]
+                );
 
             //app.UseGoogleAuthentication();
         }
